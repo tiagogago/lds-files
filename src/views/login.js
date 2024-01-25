@@ -69,6 +69,10 @@ function Login() {
             <button type="submit">Entrar</button>
           </div>
 
+          <div class="justify-center">
+            <hr />
+          </div>
+
           {msgError && (
             <p style={{ display: "block", color: "red" }}>{msgError}</p>
           )}
