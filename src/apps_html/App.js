@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import "../Css/login.css";
 
 function App() {
   return (
@@ -36,11 +36,11 @@ function App() {
 
             <p>
               Não tem uma conta?
-              <a href="../html/signup.html"> Registra-se </a>
+              <a href="./App1.js"> Registra-se </a>
             </p>
           </div>
         </div>
-        <script src="../js/signin.js"></script>
+        <script src="../components/login_js.js"></script>
       </header>
     </>
   );
