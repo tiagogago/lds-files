@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-function App() {
+function Home() {
   const [userLogado, setUserLogado] = useState(null);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
-      alert("Você precisa estar logado para acessar essa página");
-      window.location.href = "../Apps/App.js";
+      // alert("Você precisa estar logado para acessar essa página");
     } else {
       const user = JSON.parse(localStorage.getItem("userLogado"));
       setUserLogado(user);
@@ -17,7 +16,6 @@ function App() {
   function sair() {
     localStorage.removeItem("token");
     localStorage.removeItem("userLogado");
-    window.location.href = "../Apps/App.js";
   }
 
   return (
@@ -28,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

@@ -1,5 +1,6 @@
 import React from "react";
-import "../Css/registro.css";
+
+import "../css/registro.css";
 
 function App1() {
   return (
