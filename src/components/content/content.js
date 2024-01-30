@@ -21,6 +21,12 @@ const Content = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/definitions" element={<Definitions />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/drive" element={<Drive />} />
+      <Route path="/library" element={<Library />} />
+      <Route path="/file-sent" element={<File Sent />} />
     </Routes>
   );
 };
