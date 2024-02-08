@@ -1,9 +1,10 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
-
+import Register from "../../views/register";
+import Home from "../../views/home";
 import Login from "../../views/login";
 
-const Home = () => {
+const HomeOld = () => {
   return (
     <ul>
       <li>
@@ -22,11 +23,11 @@ const Content = () => {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/definitions" element={<Definitions />} />
+      {/* <Route path="/definitions" element={<Definitions />} />
       <Route path="/about" element={<About />} />
       <Route path="/drive" element={<Drive />} />
       <Route path="/library" element={<Library />} />
-      <Route path="/file-sent" element={<File Sent />} />
+      <Route path="/file-sent" element={<File Sent />} /> */}
     </Routes>
   );
 };

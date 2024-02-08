@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ColorMode from "../components/color-mode/color-mode";
 
 function Home() {
   const [userLogado, setUserLogado] = useState(null);
@@ -20,6 +21,7 @@ function Home() {
 
   return (
     <div>
+    <ColorMode />
       {userLogado ? <p id="logado">Olá {userLogado.nome}</p> : null}
       <button onClick={sair}>Sair</button>
     </div>
