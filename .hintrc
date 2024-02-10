@@ -9,7 +9,10 @@
         "ignore": [
           "text-size-adjust",
           "@-ms-viewport",
-          "@-ms-viewport"
+          "@-ms-viewport",
+          "-webkit-tap-highlight-color",
+          "-webkit-overflow-scrolling",
+          "-webkit-overflow-scrolling"
         ]
       }
     ]
