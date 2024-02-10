@@ -1,6 +1,6 @@
 import React from "react";
 
-function AccountSettings() {
+function Settings() {
   return (
     <div className="settings-container">
       <h1>Account Settings</h1>
@@ -54,4 +54,4 @@ function AccountSettings() {
   );
 }
 
-export default AccountSettings;
+export default Settings;

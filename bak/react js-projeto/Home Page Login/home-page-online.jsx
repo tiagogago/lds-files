@@ -1,7 +1,7 @@
 import React from "react";
 import "../../css/style.css";
-import Dropdown from "../Dropdown/dropdown";
-import settings_page from "../../react js-projeto/Settings-Page/settings_page";
+import Dropdown from "../../../src/components/dropdown/dropdown";
+import settings_page from "../../../src/views/settings_page";
 
 const Portfolio = () => {
   return (
