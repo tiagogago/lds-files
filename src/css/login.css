@@ -9,7 +9,7 @@
 /* background-size: cover ou contain ?? */
 
 body {
-  /* background-image: url(/public/img/templo.png);*/
+  background-image: url(/public/img/templo.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
