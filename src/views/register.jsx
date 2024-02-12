@@ -87,54 +87,57 @@ function Register() {
   const [labelConfirmSenha, setLabelConfirmSenha] = useState("Confirmar Senha");
 
   return (
-    <div class="container">
-      <div class="card">
-        <h2>Registrar</h2>
-        <div>
-          <label htmlFor="nome">{labelNome}</label>
-          <input
-            type="text"
-            id="nome"
-            value={nome}
-            onChange={handleNomeChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="usuario">{labelUsuario}</label>
-          <input
-            type="text"
-            id="usuario"
-            value={usuario}
-            onChange={handleUsuarioChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="senha">{labelSenha}</label>
-          <input
-            type="password"
-            id="senha"
-            value={senha}
-            onChange={handleSenhaChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="confirmSenha">{labelConfirmSenha}</label>
-          <input
-            type="password"
-            id="confirmSenha"
-            value={confirmSenha}
-            onChange={handleConfirmSenhaChange}
-          />
-        </div>
-        <button onClick={handleConcluirRegistro}>Registrar</button>
-        <div style={{ color: "green" }} id="msgSuccess">
-          {msgSuccess}
-        </div>
-        <div style={{ color: "red" }} id="msgError">
-          {msgError}
+    <>
+      <title>Vila Franca de Xira - Registra-se</title>
+      <div class="container">
+        <div class="card">
+          <h1>Registrar</h1>
+          <div>
+            <label htmlFor="nome">{labelNome}</label>
+            <input
+              type="text"
+              id="nome"
+              value={nome}
+              onChange={handleNomeChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="usuario">{labelUsuario}</label>
+            <input
+              type="text"
+              id="usuario"
+              value={usuario}
+              onChange={handleUsuarioChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="senha">{labelSenha}</label>
+            <input
+              type="password"
+              id="senha"
+              value={senha}
+              onChange={handleSenhaChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="confirmSenha">{labelConfirmSenha}</label>
+            <input
+              type="password"
+              id="confirmSenha"
+              value={confirmSenha}
+              onChange={handleConfirmSenhaChange}
+            />
+          </div>
+          <button onClick={handleConcluirRegistro}>Registrar</button>
+          <div style={{ color: "green" }} id="msgSuccess">
+            {msgSuccess}
+          </div>
+          <div style={{ color: "red" }} id="msgError">
+            {msgError}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
