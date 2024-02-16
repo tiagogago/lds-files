@@ -79,7 +79,7 @@ function Login() {
 
           <p>
             Não tem uma conta?
-            <a href="#"> Registra-se </a>
+            <a href="/register"> Registra-se </a>
           </p>
         </form>
       </div>
