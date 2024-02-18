@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "../css/register.css";
-
+import "./register.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 function Register() {
   const [nome, setNome] = useState("");
   const [usuario, setUsuario] = useState("");
@@ -12,6 +13,13 @@ function Register() {
   const [validConfirmSenha, setValidConfirmSenha] = useState(false);
   const [msgError, setMsgError] = useState("");
   const [msgSuccess, setMsgSuccess] = useState("");
+
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleNomeChange = (e) => {
     if (e.target.value.length <= 2) {
@@ -89,10 +97,12 @@ function Register() {
   return (
     <>
       <title>Vila Franca de Xira - Registra-se</title>
-      <div class="container">
-        <div class="card">
-          <h1>Registrar</h1>
-          <div>
+      <div className="register-container">
+        <div className="register-card">
+          <div className="register__h1">
+            <h1>Registrar</h1>
+          </div>
+          <div className="register__label-float">
             <label htmlFor="nome">{labelNome}</label>
             <input
               type="text"
@@ -101,7 +111,7 @@ function Register() {
               onChange={handleNomeChange}
             />
           </div>
-          <div>
+          <div className="register__label-float">
             <label htmlFor="usuario">{labelUsuario}</label>
             <input
               type="text"
@@ -110,25 +120,41 @@ function Register() {
               onChange={handleUsuarioChange}
             />
           </div>
-          <div>
+          <div className="register__label-float">
             <label htmlFor="senha">{labelSenha}</label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               id="senha"
               value={senha}
               onChange={handleSenhaChange}
-            />
+            />{" "}
+            <i className="fa-eye" onClick={togglePasswordVisibility}>
+              {showPassword ? (
+                <FontAwesomeIcon className="fa-eye" icon={faEyeSlash} />
+              ) : (
+                <FontAwesomeIcon className="fa-eye" icon={faEye} />
+              )}
+            </i>
           </div>
-          <div>
+
+          <div className="register__label-float">
             <label htmlFor="confirmSenha">{labelConfirmSenha}</label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               id="confirmSenha"
               value={confirmSenha}
               onChange={handleConfirmSenhaChange}
             />
           </div>
-          <button onClick={handleConcluirRegistro}>Registrar</button>
+          <div className="register__justify-center">
+            {" "}
+            <button
+              className="register__button"
+              onClick={handleConcluirRegistro}
+            >
+              Registrar
+            </button>
+          </div>
           <div style={{ color: "green" }} id="msgSuccess">
             {msgSuccess}
           </div>

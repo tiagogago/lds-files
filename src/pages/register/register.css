@@ -6,42 +6,39 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* background-size: cover ou contain ?? */
-
-body {
-  background-image: url(../../public/img/templo.png);
+.register-container {
+  background-image: url("../../../public/img/23081760-apoiar-cristandade-o-negocio-sucesso-conceito-jesus-cristo-religioso-biblico-desenho-animado-personagem-filho-do-deus-conduzindo-jovem-feliz-homem-de-negocios-caminhando-em-agua-ceu-bencao-s.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
   background-position: center center;
-}
-
-.container {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 100px;
+  align-items: center;
 }
 
-.card {
+.register-card {
   background-color: #ffffff80;
   padding: 30px;
   border-radius: 4%;
   box-shadow: 3px 3px 1px 0px #00000060;
+  width: 400px;
 }
 
-h1 {
+.register__h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #272262;
+  color: #0d009c;
 }
 
-.label-float input {
+.register__label-float input {
   width: 100%;
   padding: 5px 5px;
   display: inline-block;
   border: 0;
-  border-bottom: 2px solid #272262;
+  border-bottom: 2px solid #0d009c;
   background-color: transparent;
   outline: none;
   min-width: 180px;
@@ -50,24 +47,23 @@ h1 {
   border-radius: 0;
 }
 
-.label-float {
+.register__label-float {
   position: relative;
   padding-top: 13px;
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
-.label-float input:focus {
+.register__label-float input:focus {
   border-bottom: 2px solid #4038a0;
 }
-
-.label-float label {
-  color: #272262;
+.register__label-float label {
+  color: #0d009c;
   pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 13px;
+
   transition: all 0.3s ease-out;
 }
 
@@ -78,10 +74,10 @@ h1 {
   color: #4038a0;
 }
 
-button {
+.register__button {
   background-color: transparent;
-  border-color: #272262;
-  color: #272262;
+  border-color: #0d009c;
+  color: #0d009c;
   padding: 7px;
   font-weight: bold;
   font-size: 12pt;
@@ -93,36 +89,13 @@ button {
 }
 
 button:hover {
-  background-color: #272262;
+  background-color: #0d009c;
   color: #fff;
 }
 
-.justify-center {
+.register__justify-center {
   display: flex;
   justify-content: center;
-}
-
-hr {
-  margin-top: 10%;
-  margin-bottom: 10%;
-  width: 60%;
-}
-
-p {
-  color: #272262;
-  font-size: 14pt;
-  text-align: center;
-}
-
-a {
-  color: #7a3077;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease-out;
-}
-
-a:hover {
-  color: #272262;
 }
 
 .fa-eye {
@@ -130,13 +103,22 @@ a:hover {
   top: 15px;
   right: 10px;
   cursor: pointer;
-  color: #272262;
+  color: #0d009c;
 }
 
 #msgError {
   text-align: center;
   color: #ff0000;
   background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+#msgSuccess {
+  text-align: center;
+  color: #00bb00;
+  background-color: #bbffbe;
   padding: 10px;
   border-radius: 4px;
   display: none;
