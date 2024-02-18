@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import ColorMode from "../components/color-mode/color-mode";
-import Dropdown from "../components/dropdown/dropdown";
+import ColorMode from "../../components/color-mode/color-mode";
+import Dropdown from "../../components/dropdown/dropdown";
+import "../home/home.css";
 
 function Home() {
   const [userLogado, setUserLogado] = useState(null);
@@ -8,7 +9,6 @@ function Home() {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
-      // alert("Você precisa estar logado para acessar essa página");
     } else {
       const user = JSON.parse(localStorage.getItem("userLogado"));
       setUserLogado(user);
@@ -46,7 +46,7 @@ function Home() {
 
               <a href="#hero" className="site-logo">
                 <img
-                  src="assets/img/logo-sud.png"
+                  src="../img/logo-sud.png"
                   width="100"
                   height="100"
                   alt="logo"
@@ -88,7 +88,7 @@ function Home() {
             </div>
             <div className="col-md-6 text-right">
               <img
-                src="assets/img/fotor-ai-20230729142241-transformed.png"
+                src="../img/fotor-ai-20230729142241-transformed.png"
                 width="350"
                 height="400"
                 alt="Tiago"
@@ -104,7 +104,7 @@ function Home() {
               <div className="col-md-6 col-md-offset-3">
                 <h2>About</h2>
                 <img
-                  src="assets/img/lines.svg"
+                  src="../img/lines.svg"
                   className="img-lines"
                   alt="lines"
                 />
@@ -118,7 +118,7 @@ function Home() {
                   area I'm studying as Full Stack Web Development.
                 </p>
                 <a
-                  href="/assets/img/CV-Tiago.png"
+                  href="../img/CV-Tiago.png"
                   className="btn btn-fill"
                   target="_blank"
                   //onClick={window.download()}
@@ -134,7 +134,7 @@ function Home() {
             <div className="text-center">
               <h3>Trabalhos Recentes</h3>
               <img
-                src="assets/img/lines.svg"
+                src="../img/lines.svg"
                 className="img-lines"
                 alt="lines"
               />
@@ -176,7 +176,7 @@ function Home() {
               <div className="col-md-12">
                 <h3>What i do</h3>
                 <img
-                  src="assets/img/lines.svg"
+                  src="../img/lines.svg"
                   className="img-lines"
                   alt="lines"
                 />
@@ -184,7 +184,7 @@ function Home() {
               <div className="col-sm-4">
                 <div className="service">
                   <img
-                    src="assets/img/front-end.svg"
+                    src="../img/front-end.svg"
                     alt="Front End Developer"
                   />
                   <h4>Front-end</h4>
@@ -203,7 +203,7 @@ function Home() {
             <div className="text-center">
               <h3>My Recent Works</h3>
               <img
-                src="assets/img/lines.svg"
+                src="../img/lines.svg"
                 className="img-lines"
                 alt="lines"
               />
@@ -211,7 +211,7 @@ function Home() {
             <div className="row">
               <div className="col-md-4 col-xs-6">
                 <div className="portfolio-item">
-                  <img src="assets/img/bomb.png" className="img-res" alt="" />
+                  <img src="../img/bomb.png" className="img-res" alt="" />
                   <div className="portfolio-item-info">
                     <h4>Explosive Bomb</h4>
                     <a
@@ -230,7 +230,7 @@ function Home() {
               <div className="col-md-4 col-xs-6">
                 <div className="portfolio-item">
                   <img
-                    src="assets/img/Futuristic Card.png"
+                    src="../img/Futuristic Card.png"
                     className="img-res"
                     alt=""
                   />
@@ -252,7 +252,7 @@ function Home() {
               <div className="col-md-4 col-xs-6">
                 <div className="portfolio-item">
                   <img
-                    src="assets/img/Digital Watch.png"
+                    src="../img/Digital Watch.png"
                     className="img-res"
                     alt=""
                   />
@@ -273,7 +273,7 @@ function Home() {
               </div>
               <div className="col-md-4 col-xs-6">
                 <div className="portfolio-item">
-                  <img src="assets/img/candle.png" className="img-res" alt="" />
+                  <img src="../img/candle.png" className="img-res" alt="" />
                   <div className="portfolio-item-info">
                     <h4>Candle</h4>
                     <a
@@ -292,7 +292,7 @@ function Home() {
               <div className="col-md-4 col-xs-6">
                 <div className="portfolio-item">
                   <img
-                    src="assets/img/Animation With Game Characters.png"
+                    src="../img/Animation With Game Characters.png"
                     className="img-res"
                     alt=""
                   />
@@ -355,7 +355,7 @@ function Home() {
         <section id="contact" className="site-section section-form text-center">
           <div className="container">
             <h3>Contact</h3>
-            <img src="assets/img/lines.svg" className="img-lines" alt="lines" />
+            <img src="../img/lines.svg" className="img-lines" alt="lines" />
             <form>
               <div className="row">
                 <div className="col-sm-6">
@@ -430,7 +430,7 @@ function Home() {
               <a className="close" data-dismiss="modal">
                 <span className="glyphicon glyphicon-remove"></span>
               </a>
-              <img className="img-res" src="assets/img/bomb.png" alt="" />
+              <img className="img-res" src="../img/bomb.png" alt="" />
             </div>
             <div className="modal-body">
               <h4 className="modal-title">1º Project</h4>
@@ -462,7 +462,7 @@ function Home() {
               </a>
               <img
                 className="img-res"
-                src="assets/img/Futuristic Card.png"
+                src="../img/Futuristic Card.png"
                 alt=""
               />
             </div>
@@ -496,7 +496,7 @@ function Home() {
               </a>
               <img
                 className="img-res"
-                src="assets/img/Digital Watch.png"
+                src="../img/Digital Watch.png"
                 alt=""
               />
             </div>
@@ -528,7 +528,7 @@ function Home() {
               <a className="close" data-dismiss="modal">
                 <span className="glyphicon glyphicon-remove"></span>
               </a>
-              <img className="img-res" src="assets/img/candle.png" alt="" />
+              <img className="img-res" src="../img/candle.png" alt="" />
             </div>
             <div className="modal-body">
               <h4 className="modal-title">4º Project</h4>
@@ -560,7 +560,7 @@ function Home() {
               </a>
               <img
                 className="img-res"
-                src="assets/img/Animation With Game Characters1.png"
+                src="../img/Animation With Game Characters1.png"
                 alt=""
               />
             </div>

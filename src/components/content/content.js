@@ -1,11 +1,12 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
-import Register from "../../views/register";
-import Login from "../../views/login";
-import Home from "../../views/home";
+import Register from "../../pages/register/register";
+import Login from "../../pages/login/login";
+import Home from "../../pages/home/home";
 import Settings from "../../views/settings";
+import "../../css/bootstrap.min.css";
 
-const HomeOld = () => {
+/* const HomeOld = () => {
   return (
     <ul>
       <li>
@@ -16,7 +17,7 @@ const HomeOld = () => {
       </li>
     </ul>
   );
-};
+}; */
 
 const Content = () => {
   return (
